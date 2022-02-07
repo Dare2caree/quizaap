@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from './questions.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-questions',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
-
-  constructor() { }
+   result!:number;
+  constructor(private questions:QuestionsService) { 
+    this.questions.result.subscribe(re=>{
+      this.result=re;
+    })
+  }
 
   ngOnInit() {
   }

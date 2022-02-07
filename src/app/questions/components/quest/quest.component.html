@@ -1,3 +1,57 @@
-<p>
-  quest works!
-</p>
+<div class="row">{{min}}:{{sec}}</div>
+ <div class="row">
+ <!-- backbutton -->
+   <div class="col-2 d-flex">
+    <button class="next" (click)="back()" [disabled]="qnum<=0">back</button>
+   </div>
+
+<!-- starting of the form -->
+
+   <div class="col qbox">
+    <form action="" [formGroup]="qref"  (ngSubmit)="submitquiz(qref)">
+     <div *ngFor="let qu of q" >
+      <div class="question">
+      <h2 class="headq">{{ qu.question}}</h2>
+
+
+      <div class="inputbox">
+       <input type="radio" name="{{qu.question}}" id=""  formControlName="{{qu.question}}" value="{{qu.opt1}}">
+        <strong>{{qu.opt1}}</strong>
+      </div>
+
+
+      <div class="inputbox">
+        <input type="radio" name="{{qu.question}}" id="" formControlName="{{qu.question}}" value="{{qu.opt2}}">
+         <strong>{{qu.opt2}}</strong>
+       </div>
+
+
+       <div class="inputbox">
+        <input type="radio" name="{{qu.question}}" id="" formControlName="{{qu.question}}" value="{{qu.opt3}}">
+         <strong>{{qu.opt3}}</strong>
+       </div>
+
+
+       <div class="inputbox">
+        <input type="radio" name="{{qu.question}}" id="" formControlName="{{qu.question}}" value="{{qu.opt4}}">
+         <strong>{{qu.opt4}}</strong>
+       </div>
+      </div>
+     </div>
+
+
+    <button type="submit" class="btn btn-success p-1 m-2">submit</button>
+ 
+  </form>
+   </div>
+
+   <!-- next button start here -->
+
+   <div class="col-2 d-flex">
+    <button class="next" (click)="next()" [disabled]="qnum>=q.length-1">next</button>
+  </div>
+ </div>
+ 
+
+ 
+ 

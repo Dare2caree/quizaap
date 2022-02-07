@@ -6,12 +6,14 @@ import { QuestComponent } from './components/quest/quest.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { RouterModule } from '@angular/router';
 
-
+import { QuestionsService } from './questions.service';
 
 @NgModule({
+  providers:[QuestionsService],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   declarations: [QuestionsComponent,QuestComponent,RulesComponent]
 })

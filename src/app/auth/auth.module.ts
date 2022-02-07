@@ -7,6 +7,9 @@ import { SigninComponent } from './component/signin/signin.component';
 import { UserinfoService } from './userinfo.service';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { LoginComponent } from './component/login/login.component';
+
+
 
 
 @NgModule({
@@ -14,11 +17,12 @@ import { ActivatedRoute } from '@angular/router';
   imports: [
     CommonModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   
   ],
   exports:[
     SigninComponent,AuthComponent
   ],
-  declarations: [AuthComponent,SigninComponent]
+  declarations: [AuthComponent,SigninComponent,LoginComponent]
 })
 export class AuthModule { }
