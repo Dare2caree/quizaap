@@ -1,10 +1,7 @@
 <div class="row">{{min}}:{{sec}}</div>
  <div class="row">
- <!-- backbutton -->
-   <div class="col-2 d-flex">
-    <button class="next" (click)="back()" [disabled]="qnum<=0">back</button>
-   </div>
 
+  
 <!-- starting of the form -->
 
    <div class="col qbox">
@@ -40,17 +37,13 @@
      </div>
 
 
-    <button type="submit" class="btn btn-success p-1 m-2">submit</button>
+    <button type="submit" class="btn btn-success p-1 m-2 submit" [disabled]="ifdisabled">submit</button>
  
   </form>
    </div>
 
-   <!-- next button start here -->
 
-   <div class="col-2 d-flex">
-    <button class="next" (click)="next()" [disabled]="qnum>=q.length-1">next</button>
-  </div>
- </div>
+   
  
 
  

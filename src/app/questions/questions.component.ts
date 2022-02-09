@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionsService } from './questions.service';
-import { Subject } from 'rxjs';
+// import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-questions',

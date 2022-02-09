@@ -3,6 +3,7 @@ import { QuestionsService } from '../../questions.service';
 import { FormGroup, FormControl, FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Questmodel } from '../../questmodel';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-quest',
@@ -15,8 +16,10 @@ qnum:number=0;
 qref!:FormGroup;
 min!:number;
 sec!:number;
+
+ifdisabled:boolean=false;
   ActivatedRoute: ActivatedRoute | null | undefined;
-  constructor(private questions:QuestionsService,public form:FormBuilder,private router:Router) {
+  constructor(private questions:QuestionsService,public form:FormBuilder,private router:Router,private http:HttpClient) {
     this.q=this.questions.questions
     this.qref=form.group({});
   }
@@ -74,11 +77,11 @@ clearInterval(a)
             score+=1;
         }
    })
-
+     
    console.log(score)
-
+   
    this.questions.result.next(score)
-
+   this.ifdisabled=true;
    this.router.navigate(['../../', 'home'], { relativeTo: this.ActivatedRoute })
      }
 
