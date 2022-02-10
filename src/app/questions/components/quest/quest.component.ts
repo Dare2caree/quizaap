@@ -46,8 +46,8 @@ back(){
         }
       })
 
-      let min=1;
-      let sec=5
+      let min=14;
+      let sec=59
      let a= setInterval(()=>{
         sec=sec-1
         if(sec<=0){
@@ -82,7 +82,7 @@ clearInterval(a)
    
    this.questions.result.next(score)
    this.ifdisabled=true;
-   this.router.navigate(['../../', 'home'], { relativeTo: this.ActivatedRoute })
+  // this.router.navigate(['../../', 'home'], { relativeTo: this.ActivatedRoute })
      }
 
 }

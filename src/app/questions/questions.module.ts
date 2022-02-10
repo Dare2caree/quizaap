@@ -8,8 +8,10 @@ import { RouterModule } from '@angular/router';
 
 import { QuestionsService } from './questions.service';
 
+
 @NgModule({
   providers:[QuestionsService],
+ 
   imports: [
     CommonModule,
     RouterModule,

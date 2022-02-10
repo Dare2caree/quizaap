@@ -2,5 +2,9 @@
     height:4rem;
 }
 nav{
-    background-color: rgb(99, 224, 99);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 5px rgb(255, 255, 255) ;
+    color: white;
+    
 }

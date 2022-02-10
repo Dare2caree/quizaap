@@ -18,7 +18,7 @@ export class RulesComponent implements OnInit {
 
  
   ngOnInit() {
-      this.question.result.next(10);
+      this.question.result.next(this.result);
   }
 
 }

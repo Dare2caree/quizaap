@@ -6,11 +6,14 @@ import { RulesComponent } from './questions/components/rules/rules.component';
 import { LoginComponent } from './auth/component/login/login.component';
 
 
+
 const routes: Routes = [
   {path:'signin',component:SigninComponent},
   {path:'home',component:RulesComponent},
   {path:'questions',component:QuestionsComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  {path:'',redirectTo:'login', pathMatch: 'full' },
+
 ];
 
 @NgModule({

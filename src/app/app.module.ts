@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { QuestionsModule } from './questions/questions.module';
+import { SigninComponent } from './auth/component/signin/signin.component';
+import { LoginComponent } from './auth/component/login/login.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
   ],
   imports: [
@@ -21,7 +23,9 @@ import { QuestionsModule } from './questions/questions.module';
     AppRoutingModule,
     HttpClientModule,
     AuthModule,
-    QuestionsModule
+    QuestionsModule,
+    AuthModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

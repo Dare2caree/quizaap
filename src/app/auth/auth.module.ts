@@ -21,7 +21,7 @@ import { LoginComponent } from './component/login/login.component';
    
   ],
   exports:[
-    SigninComponent,AuthComponent
+    SigninComponent,AuthComponent,LoginComponent
   ],
   declarations: [AuthComponent,SigninComponent,LoginComponent]
 })
